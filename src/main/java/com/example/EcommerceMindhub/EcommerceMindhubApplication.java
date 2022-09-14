@@ -46,22 +46,26 @@ public class EcommerceMindhubApplication {
 			Client client2=new Client("Gabriel", "Cuello", "cgabrielcuello@gmail.com", "Av. Siempre Viva 130", passwordEncoder.encode("1234"));
 			Client client3=new Client("Ibrian", "Festorazzi", "ibrian_84@hotmail.com", "Av. Siempre Viva 145", passwordEncoder.encode("1234"));
 			Client client4=new Client("Nadia", "Matsumoto", "naistar@gmail.com", "Av. Siempre Viva 150", passwordEncoder.encode("1234"));
-
+			Client admin = new Client("Admin","Admin","admin@admin.com", "Av. del Admin", passwordEncoder.encode("admin"));
 
 			clientRepository.save(client1);
 			clientRepository.save(client2);
 			clientRepository.save(client3);
 			clientRepository.save(client4);
+			clientRepository.save(admin);
 
 			ShoppingCart carrito1=new ShoppingCart(client1);
 			ShoppingCart carrito2=new ShoppingCart(client2);
 			ShoppingCart carrito3=new ShoppingCart(client3);
 			ShoppingCart carrito4=new ShoppingCart(client4);
+			ShoppingCart carrito5=new ShoppingCart(admin);
+
 
 			shoppingCartRepositories.save(carrito1);
 			shoppingCartRepositories.save(carrito2);
 			shoppingCartRepositories.save(carrito3);
 			shoppingCartRepositories.save(carrito4);
+			shoppingCartRepositories.save(carrito5);
 
 
 
